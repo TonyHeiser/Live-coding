@@ -9,7 +9,7 @@
 */
 
 function generateArray(len, maxValue) {
-  return 0
+  return 0;
 }
 
 // console.log(generateArray(5, 0)); // все элементы должны быть 0
@@ -184,4 +184,63 @@ function addSomeNewMethods() {
   console.log(arr1.reverseStrings()); // [ 'NSFW', 18, 'pussy', 'skunk' ]
 }
 
-// addSomeNewMethods();
+addSomeNewMethods();
+
+
+const list = document.getElementById("task11");
+const task1 = [generateArray(5, 0), generateArray(10, 1), generateArray(100, 5), generateArray(0, 10), generateArray(1, 3), generateArray(-5, 10), generateArray(5, -3)];
+task1.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list.appendChild(li);
+});
+
+const list2 = document.getElementById("task22");
+const task2 = [ findUniq([1,1,2,2,3]), findUniq([4,5,5,4,6]), findUniq([7,2,2,2,2]), findUniq([4,4,9,5,5]), findUniq([4,4,9,5,5]), findUniq([6,6,6,1]), findUniq([-1,-1,-2,-2,-3]), findUniq([1.1,1.1,2.2]), findUniq([42]) ];
+task2.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list2.appendChild(li);
+});
+
+const list3 = document.getElementById("task33")
+const task3 = [average([],2),average([2,4,6],2),average([1,2,3,4,5],2),average([10,[20,[30]]],10),average(["x",NaN,null,undefined,15,30],15),average([1,3,5],2),average([1,2,3],1),average(["String",20,[null,9],undefined,[1000,1,[NaN,2,3]]],2),average([44,22,99,33,11,55,66,77,88],1000),average([44,22,99,33,11,0,66,77,0],0)];
+task3.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list3.appendChild(li);
+});
+
+const list4 = document.getElementById("task44");
+const task4 = [swapTwo([1,2,3,4],2,4),swapTwo([1,2,3,4,1,2,3,4],2,4),swapTwo([1,2,3],2,2),swapTwo([1,1,1,2,2,2],1,2),swapTwo([0,-1,-2,3],0,-2)];
+task4.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list4.appendChild(li);
+});
+
+const list5 = document.getElementById("task55");
+const task5 = [mergeArrays([1,3,5],[2,4,6]),mergeArrays([1,2,2],[2,3,3]),mergeArrays([5,10,15],[10,20,25]),mergeArrays([-5,-1,0],[-10,-1,5]),mergeArrays([],[]),mergeArrays([], [1,2,3]),mergeArrays([1000,50],[999,1000])];
+task5.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list5.appendChild(li);
+});
+
+const list6 = document.getElementById("task66");
+const task6 = [
+  [1, 2, 3].anyMatch(n => n > 2),
+  [1, 2, 3].anyMatch(n => n > 5),
+  [1, 2, 3].allMatch(n => n > 0),
+  [1, 2, -3].allMatch(n => n > 0),
+  [2, 3, 4].product(),
+  [10].product(),
+  [].product(),
+  ["uabys", "syk"].reverseStrings(),
+  ["WFSN", 18, "yssup", "knuks"].reverseStrings()
+];
+task6.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  list6.appendChild(li);
+});
